@@ -1,4 +1,5 @@
 # Hugo configuration file
+baseURL: https://prof-ramos.github.io/hextra/
 title: My Site
 
 # import hextra as module
