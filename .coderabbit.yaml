@@ -1,0 +1,106 @@
+# CodeRabbit Configuration File
+# Documentation: https://docs.coderabbit.ai/guides/configure-coderabbit
+
+# Language and tone settings
+language: pt-BR
+tone_instructions: "Use um tom profissional e construtivo nas revisões de código"
+
+# Review settings
+reviews:
+  # Enable or disable specific review features
+  auto_review:
+    enabled: true
+    drafts: false
+
+  # Review profile settings
+  profile: chill
+
+  # Request changes workflow
+  request_changes_workflow: false
+
+  # High level summary
+  high_level_summary: true
+
+  # Auto reply on review comments
+  auto_reply: true
+
+  # Poem generation
+  poem: false
+
+  # Review status
+  review_status: true
+
+  # Collapse walkthrough
+  collapse_walkthrough: false
+
+  # Path filters - files to include/exclude from review
+  path_filters:
+    - "!**/*.md"
+    - "!**/go.sum"
+    - "!**/go.mod"
+    - "!**/*.yaml"
+    - "!**/*.yml"
+
+  # Abort on close
+  abort_on_close: true
+
+  # Auto incremental review
+  auto_incremental_review: true
+
+# Chat settings
+chat:
+  auto_reply: true
+
+# Code quality checks
+tools:
+  # Linting and static analysis
+  enabled:
+    - markdownlint
+    - yamllint
+
+  # Disable certain tools if needed
+  disabled: []
+
+# Pull request settings
+pull_requests:
+  # Auto-approve certain changes
+  auto_approve:
+    enabled: false
+
+  # Labels to add based on changes
+  labels:
+    - name: "documentation"
+      patterns:
+        - "**/*.md"
+    - name: "configuration"
+      patterns:
+        - "**/*.yaml"
+        - "**/*.yml"
+        - "**/*.toml"
+    - name: "content"
+      patterns:
+        - "content/**/*"
+    - name: "workflows"
+      patterns:
+        - ".github/workflows/**/*"
+
+# Knowledge base settings
+knowledge_base:
+  # Learnings from previous reviews
+  opt_out: false
+
+  # PR knowledge sharing
+  learnings:
+    scope: "global"
+
+# Early access features
+early_access: false
+
+# Enable/disable specific review aspects
+review_aspects:
+  - security
+  - performance
+  - best_practices
+  - documentation
+  - error_handling
+  - maintainability
